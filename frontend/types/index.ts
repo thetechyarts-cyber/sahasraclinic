@@ -45,6 +45,7 @@ export interface PatientProfile {
     name: string;
     email: string;
   };
+  patient_documents?: any[];
 }
 
 // ─── Case Sheet Types ───────────────────────────────────────────
