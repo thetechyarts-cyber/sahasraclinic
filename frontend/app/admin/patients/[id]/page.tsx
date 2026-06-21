@@ -19,6 +19,8 @@ interface PatientProfile {
     name: string;
     email: string;
   };
+  patient_documents?: any[];
+  consultations?: any[];
 }
 
 export default function PatientProfilePage({ params }: { params: { id: string } }) {
@@ -125,7 +127,7 @@ export default function PatientProfilePage({ params }: { params: { id: string } 
                             if (confirm('Are you sure you want to delete this document?')) {
                               try {
                                 await api.delete(`/case-sheets/documents/${doc.id}`);
-                                setPatient({...patient, patient_documents: patient.patient_documents.filter((d: any) => d.id !== doc.id)});
+                                setPatient({...patient, patient_documents: patient.patient_documents?.filter((d: any) => d.id !== doc.id) || []});
                               } catch (err) {
                                 alert('Failed to delete document');
                               }
