@@ -23,7 +23,7 @@ const superAdminLinks = [
 
 export default function AdminLayout({ children }: { children: React.ReactNode }): JSX.Element {
   const { user } = useAuth();
-  const isSuperAdmin = user?.roles?.name === 'super_admin';
+  const isSuperAdmin = user?.role === 'super_admin';
   
   const links = isSuperAdmin ? [...adminLinks, ...superAdminLinks] : adminLinks;
 
