@@ -1,0 +1,8 @@
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = ".next"
+
+# This ensures Netlify knows it's a Next.js app and handles all routing automatically
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
