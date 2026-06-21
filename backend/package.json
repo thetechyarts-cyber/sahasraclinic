@@ -2,7 +2,7 @@
   "name": "hms-backend",
   "version": "1.0.0",
   "description": "HMS Backend — Express + TypeScript + Supabase",
-  "main": "dist/index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "tsc",
