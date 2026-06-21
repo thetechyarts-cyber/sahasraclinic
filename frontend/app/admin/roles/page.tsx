@@ -130,13 +130,13 @@ export default function RolesPermissionsPage() {
             </div>
 
             <div className="grid gap-8">
-              {Object.entries(permissionsByModule).map(([module, perms]) => (
+              {Object.entries(permissionsByModule).map(([module, perms]: [string, any]) => (
                 <div key={module}>
                   <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4">
                     {module} Module
                   </h3>
                   <div className="grid gap-4 sm:grid-cols-2">
-                    {perms.map((perm) => (
+                    {perms.map((perm: any) => (
                       <label 
                         key={perm.id}
                         className={`flex items-start gap-3 p-4 rounded-lg border cursor-pointer transition-colors ${
