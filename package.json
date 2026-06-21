@@ -1,0 +1,15 @@
+{
+  "name": "hms",
+  "version": "1.0.0",
+  "description": "Sahasra Clinic — Monorepo",
+  "private": true,
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "lint": "cd backend && npm run lint && cd ../frontend && npm run lint",
+    "test": "cd backend && npm test && cd ../frontend && npm test"
+  },
+  "keywords": ["hospital", "management", "clinic", "hms"],
+  "license": "PRIVATE"
+}
